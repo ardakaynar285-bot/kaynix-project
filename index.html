@@ -4,60 +4,71 @@
 <meta charset="UTF-8">
 <title>Kaynix Project</title>
 <style>
-body {
+body{
   margin:0;
-  font-family: Arial, sans-serif;
-  background:#0b1020;
+  font-family:Arial, sans-serif;
+  background:#0f172a;
   color:white;
 }
 
-header {
+header{
+  padding:80px 20px;
   text-align:center;
-  padding:70px 20px;
-  background:linear-gradient(90deg,#ff4d4d,#7c3aed,#06b6d4);
+  background:linear-gradient(90deg,#6366f1,#22c55e);
 }
 
-h1 {
+h1{
+  font-size:48px;
   margin:0;
-  font-size:50px;
 }
 
-.container {
-  max-width:900px;
+.container{
+  max-width:1100px;
   margin:auto;
   padding:40px 20px;
 }
 
-.card {
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:20px;
+}
+
+.card{
   background:#111827;
   padding:25px;
-  border-radius:14px;
-  margin-bottom:25px;
+  border-radius:16px;
+  transition:0.2s;
 }
 
-button {
-  padding:12px 22px;
+.card:hover{
+  transform:translateY(-5px);
+  background:#1f2937;
+}
+
+.price{
+  font-size:22px;
+  color:#22c55e;
+  margin:10px 0;
+}
+
+button{
+  padding:10px 18px;
   border:none;
-  border-radius:10px;
-  font-size:16px;
+  border-radius:8px;
+  background:#6366f1;
+  color:white;
   cursor:pointer;
-  margin:8px;
 }
 
-.discord {
-  background:#5865F2;
-  color:white;
+button:hover{
+  background:#4f46e5;
 }
 
-.buy {
-  background:#22c55e;
-  color:white;
-}
-
-footer {
+footer{
   text-align:center;
-  padding:20px;
-  opacity:0.7;
+  padding:30px;
+  opacity:0.6;
 }
 </style>
 </head>
@@ -65,38 +76,43 @@ footer {
 <body>
 
 <header>
-  <h1>Kaynix Project</h1>
-  <p>Minecraft Sunucu Paketleri Geliştirme Projesi</p>
+<h1>Kaynix Project</h1>
+<p>Minecraft Sunucu Paketleri</p>
 </header>
 
 <div class="container">
 
+<h2>Sunucu Paketleri</h2>
+
+<div class="grid">
+
 <div class="card">
-<h2>📌 Proje Hakkında</h2>
-<p>
-Kaynix Project, Minecraft sunucu paketleri geliştirip ücretsiz ve ücretli olarak
-toplulukla paylaşan bir projedir. Tüm paketler optimize ve kullanıma hazırdır.
-</p>
+<h3>SMP & PVP</h3>
+<p>Hazır ekonomi, claim ve PVP sistemleri</p>
+<div class="price">Ücretsiz</div>
+<button onclick="window.open('https://discord.gg/ametnp8SFP')">İndir</button>
 </div>
 
 <div class="card">
-<h2>🎮 Paketler</h2>
-<p>✅ SMP & PVP — Yayınlandı</p>
-<p>🟨 BoxPVP — Yakında</p>
-<p>🟨 SMP — Yakında</p>
-<p>💎 Towny — Premium</p>
+<h3>BoxPVP</h3>
+<p>Gelişmiş box sistemi ve ranklar</p>
+<div class="price">Yakında</div>
+<button disabled>Yakında</button>
 </div>
 
-<div class="card" style="text-align:center;">
-<h2>🔗 Bağlantılar</h2>
+<div class="card">
+<h3>SMP</h3>
+<p>Optimize survival deneyimi</p>
+<div class="price">Yakında</div>
+<button disabled>Yakında</button>
+</div>
 
-<a href="https://discord.gg/ametnp8SFP" target="_blank">
-<button class="discord">Discord Sunucusu</button>
-</a>
-
-<a href="https://discord.gg/ametnp8SFP" target="_blank">
-<button class="buy">Satın Al</button>
-</a>
+<div class="card">
+<h3>Towny Premium</h3>
+<p>Resimli kayıt sistemi + özel ayarlar</p>
+<div class="price">200 TL</div>
+<button onclick="window.open('https://discord.gg/ametnp8SFP')">Satın Al</button>
+</div>
 
 </div>
 
